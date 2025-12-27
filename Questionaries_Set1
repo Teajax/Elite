@@ -1,0 +1,42 @@
+1]Give a walkthrough of your day to day work 
+
+2]How do you build test framework from scratch
+
+3]What is conftest file , what goes inside it
+
+4]pytest fixture and explain its scopes
+
+5]How to skip a test - @pytest.mark.skip 
+
+6]What is parametrization
+
+7]How to run jobs quickly
+
+8]What is docker , diff between docker image and docker container
+
+9]How do you perform API Testing 
+
+10]Delete files older than 28 days - linux cmd
+
+11]chmod 755 file.txt
+
+12]How to see process running
+
+13]What is Json , characteristics, How is Json diff from xml
+
+14]Diff between git and GitHub
+
+15]How to commit partial content of a file
+
+16]Apart from push,pull what else you have done in GitHub
+
+17]What do Rebase do
+
+18]my_str = 'abc'
+   my_str = my_str + 'efg' - than why str is said as immutable
+
+19]what is Sets 
+
+
+
+
