@@ -1,0 +1,170 @@
+1: What is Linux and what are its main features?
+Linux is a free and open-source operating system based on Unix. 
+Its main features include its stability, security, flexibility, free of cost, 
+and support for a wide range of hardware.
+
+2: What is the difference between Linux and UNIX?
+The primary difference is that Linux is open source and free, while UNIX is proprietary. 
+Additionally, Linux is widely used for a variety of applications, 
+whereas UNIX is primarily used in large enterprises.
+
+3: What is the Linux Kernel?
+The Linux kernel is the core(heart) of the Linux operating system. 
+It acts as an interface between the computer's hardware and the software running on it.
+It manages cpu and memory in devices like Running Multiple programs at once, Organizing Files & Storage, Managing n/w Communications
+
+4: What is a shell in Linux?
+A shell in Linux is an CLI that allows users to interact with the operating system by running commands.
+
+5:find files in Linux?
+  1. Find a file by name (syntax)
+     find /path -name filename
+
+     Example:
+     find /home -name test.txt
+
+     Case-insensitive:
+     find /home -iname test.txt
+
+  2. Find files by type
+     Files only:
+     find /path -type f
+
+     Directories only:
+     find /path -type d
+
+  3. Find files by extension
+     find /path -type f -name "*.log"
+	
+  4. Find files by size
+     Files larger than 100MB:
+     find /path -type f -size +100M
+
+     Files smaller than 1KB:
+     find /path -type f -size -1k
+
+  5. Find files by time
+     Modified more than 7 days ago:
+     find /path -type f -mtime +7
+     
+     Modified in last 1 day:
+     find /path -type f -mtime -1
+
+  6. Find and delete files (be careful ⚠️)
+     find /path -type f -mtime +30 -delete
+
+  7. Find text inside files
+     grep "ERROR" /path/*.log
+
+     Recursive:
+     grep -R "ERROR" /path
+
+6]change file & directory permissions
+  Numeric (octal) method  (most common)
+  chmod 755 file.sh
+  Owner → 7 (rwx)
+  Group → 5 (r-x)
+  Others → 5 (r-x)
+
+  chmod 777 file - Everyone full access (unsafe)
+  chmod 644 file - Owner write, others read
+  chmod 600 file - Owner only
+
+  Symbolic method
+  chmod u+x script.sh
+  u → user (owner)
+  g → group
+  o → others
+  a → all
+
+  chmod g+w file - add group write permission
+  chmod o-r file - remove others read permission
+  chmod a+x script.sh - add all execute permission
+
+7]check current path/directory
+  pwd 
+
+8]use of pipe in Linux
+  A pipe passes the result of one command as input to the next command.
+  grep "ERROR" /var/log/*.log | tail -n 50
+  
+9]How can you check for free disk space
+  df -h
+  Sample Output
+  Filesystem      Size  Used Avail Use% Mounted on
+  /dev/sda1        50G   30G   18G  63% /
+  tmpfs           2.0G     0  2.0G   0% /dev/shm
+
+  Size → Total disk size
+  Used → Space already used
+  Avail → Free disk space
+  Use% → Percentage used
+  Mounted on → Directory where disk is attached
+
+10]To view content of a file and different methods
+   The cat command in Linux is used to display the contents of a file, combine files, or create new files.
+   1.View a file
+     cat file.txt
+
+   2.View multiple files together
+     cat file1.txt file2.txt
+
+   3.Create a new file
+     cat > newfile.txt
+     Type some text
+     Press Ctrl + D to save and exit
+
+   4.Append to an existing file
+     cat >> existingfile.txt
+     Adds text at the end of the file
+     Press Ctrl + D to finish
+   
+   5.Combine files into a new file
+     cat file1.txt file2.txt > combined.txt
+     > overwrites the file if it exists
+     >> appends instead of overwriting
+
+   6.Number lines (useful for logs)
+     cat -n file.txt
+     Sample output:
+	1  Hello World
+	2  This is a sample file
+	3  Linux commands are fun
+
+   7.| Command | Shows             | Notes                        
+     | ------- | ----------------- | ---------------------------- |
+     | `less`  | File page by page | Can scroll up & down, search |
+     | `more`  | File page by page | Forward only                 |
+     | `head`  | First N lines     | Default 10                   |
+     | `tail`  | Last N lines      | `-f` for real-time           |
+     | `nl`    | Numbered lines    | Adds line numbers            |
+    
+11]ls & lscpu  cmd
+   ls lists files and directories, and with options can show details, hidden files, sizes, and sorting.
+	ls -l        # long listing
+	ls -a        # include hidden files
+	ls -lh       # human-readable sizes
+	ls -la       # long + hidden
+	ls -lt       # sort by modification time
+	ls -d */     # only directories
+	ls -R        # recursive
+
+   The lscpu command in Linux is used to display detailed information about the CPU architecture of the system
+
+   
+
+	
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
