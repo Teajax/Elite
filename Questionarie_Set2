@@ -1,0 +1,44 @@
+1]find 1st 100 student who has % > than 80
+
+2]find top 3 students 
+
+3]joins in sql
+
+4]find 2nd max salary from emp and salary table
+
+5]my_str = "Tejal Rahate" replace with "_" if duplicate found
+    my_str = "Tejal Rahate"
+    seen = set()
+    result = "".join(ch if ch not in seen and not seen.add(ch) else "_" for ch in my_str)
+    print(result)
+
+6]anagram code
+
+7]what is Encapsulation and Abstraction with example
+
+8] Table with 2 cols , 1st representing label as name,age,add and 2nd col has textfields
+find xpath of text-fields name,age,add using following sibling 
+
+“We use following-sibling to move from the label column to the input column in table-based layouts.”
+<table border="1">
+    <tr>
+        <td><label for="name">Name</label></td>
+        <td><input type="text" id="name"></td>
+    </tr>
+    <tr>
+        <td><label for="age">Age</label></td>
+        <td><input type="text" id="age"></td>
+    </tr>
+    <tr>
+        <td><label for="address">Address</label></td>
+        <td><input type="text" id="address"></td>
+    </tr>
+</table>
+
+//label[text()='Name']/parent::td/following-sibling::td/input
+//label[text()='Age']/parent::td/following-sibling::td/input
+//label[text()='Address']/parent::td/following-sibling::td/input
+
+
+
+
